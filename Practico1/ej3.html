@@ -1,0 +1,41 @@
+<form action="ej3.php" method="POST">
+    <label for="">nombre</label>
+    <input type="text" name="nombre">
+
+    <label for="">apellido</label>
+    <input type="text" name="apellido">
+
+    <label for="">edad</label>
+    <input type="number" name="edad">
+
+    <label for="">genero:</label>
+
+    <label for="">masculino</label>
+    <input type="radio" name="sexo" id=""value=masculino>
+    <label for="">femenino</label>
+    <input type="radio" name="sexo" id=""value=femenino>
+
+    <label for="">pais</label>
+    <select name="pais" id="">
+        <option value=Argentina>Argentina</option>
+        <option value="Venezuela">Venezuela</option>
+        <option value="España">Espania</option>
+        <option value="Bolivia">Bolivia</option>
+        <option value="Nueva Zelanda">Nueva Zelanda</option>
+        <option value="Mexico">Mexico</option>
+    </select>
+
+    <label for="">intereses</label>
+
+    <label for="">jugar</label>
+    <input type="checkbox" name="intereses[]" id="" value="jugar">
+    <label for="">salir</label>
+    <input type="checkbox" name="intereses[]" id="" value="salir">
+    <label for="">veganear</label>
+    <input type="checkbox" name="intereses[]" id="" value="veganear">
+    <label for="">caminar</label>
+    <input type="checkbox" name="intereses[]" id="" value="caminar">
+
+
+    <button>confirmar</button>
+</form>
