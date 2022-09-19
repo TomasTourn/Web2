@@ -33,7 +33,7 @@ function getUniversidad(){
 
 
     $query-> execute([$nombre,$profesor]);// ponelo como arreglo
- 
+    showTable();
 }
 
 function deleteMateriaById($id){
@@ -41,7 +41,7 @@ function deleteMateriaById($id){
 
     //ejecuto las consultas prepare y execute
 
-    $query = $db->prepare('DELETE FROM materia WHERE id=?');//usar el ? vegano
+    $query = $db->prepare('DELETE FROM materia WHERE id=?');//usar el ? 
 
 
     $query-> execute([$id]);

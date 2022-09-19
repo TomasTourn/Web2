@@ -1,3 +1,3 @@
-        <footer>footer xd</footer>
+        <footer>footer</footer>
     </body>
 </html>

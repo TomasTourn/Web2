@@ -15,9 +15,9 @@ if($params[0]=="home"){
 else if($params[0]=="tomy"){
     showName("tomy");
 }
-else if($params[0]=="lulolindo"){
-    showName("lulo lindo");
+else if($params[0]=="lulo"){
+    showName("lulo");
 }
-else if($params[0]=="luchosexy"){
-    showName("lucho sexy");
+else if($params[0]=="lucho"){
+    showName("lucho");
 }

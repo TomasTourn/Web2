@@ -26,7 +26,7 @@ else if($params[0]=="table"){
 else if($params[0]=="delete"){
     
     deleteMateria($params[1]);//no me deja eliminar mas de uno a la vez
-    //header("location: ". BASE_URL."table");// porque no funca?
+    header("location: ". BASE_URL."table");
     
    
 }

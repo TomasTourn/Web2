@@ -40,6 +40,7 @@ function showTable(){
                  </tr>";
          }
          echo "</table>";
+         echo "<a href='home'>ir a formulario</a>";
  }
 
  function showEditar(){
@@ -57,4 +58,4 @@ function showTable(){
 
 
 
- <?php} 
+ <?php }?>

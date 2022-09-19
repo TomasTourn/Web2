@@ -4,8 +4,8 @@ function showHome(){?>
         
         <nav>
             <a href="tomy">tomy</a>
-            <a href="lulolindo">lulo lindo</a>
-            <a href="luchosexy">lucho sexy</a>
+            <a href="lulo">lulo</a>
+            <a href="lucho">lucho</a>
         </nav>
     
     
