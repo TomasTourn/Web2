@@ -36,5 +36,20 @@ else if($params[0]=="add"){
     
 }
 
+else if($params[0]=="editar"){
+
+    showEditar($params[1]);
+    if(!Empty($params[2])){
+        Editar($params[2]);
+        header("location: ". BASE_URL."table");
+    }
+    
+}
+else if($params[0]=="search"){
+    Search();
+}
+
+
+
 
 

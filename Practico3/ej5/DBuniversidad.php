@@ -48,6 +48,27 @@ function deleteMateriaById($id){
     showTable();
     
 }
+
+function getSearch($searched){
+    $db = connectDB();
+    $query = $db->prepare('SELECT * FROM materia WHERE Nombre  LIKE ? ');
+    $query-> execute([$searched]);
+    $materia = $query->fetchAll(PDO::FETCH_OBJ);
+    ShowSearch($materia);
+
+
+}
+
+function EditarTabla($id,$nombre,$profesor){
+
+    $db = connectDB();
+
+    $query = $db->prepare('UPDATE materia SET Nombre=?, Profesor=? WHERE materia.id=?');
+
+    $query-> execute([$nombre,$profesor,$id]);
+    showTable();
+}
+
 //deleteMateria();
 //insertUniversidad();
 //mostrarTabla();
