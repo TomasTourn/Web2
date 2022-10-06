@@ -1,16 +1,24 @@
 <?php
-
+ require_once "libs/Smarty.class.php";
 class cleaningView{
-
+   
+   /* function __construct(){
+        $smarty = new Smarty();
+    }*/
+    
     function showProducts($products){
-      
-        include  "templates/header.php";
+        $smarty = new Smarty();
+        $smarty->assign('titulo','lula');
+        $smarty->assign('encabezado','mvc');
+        $smarty->assign('footer','footer');
+        $smarty->display('templates/header.tpl');
+        
         echo "<ul>";
         foreach($products as $product){
             echo "<li> <a href='show/$product->name'>$product->name</a></li>";       
         }
         echo "</ul>";
-        include  "templates/footer.php";
+        $smarty->display('templates/footer.tpl');
     }
 
 
@@ -25,6 +33,17 @@ class cleaningView{
 
     }
 
+    function showAll($products){
+        
+        $smarty = new Smarty();
+        $smarty->assign('products',$products);
+        $smarty->display('templates/showAll.tpl');
+
+        var_dump($products);
+
+
+
+    }
 
 
 }

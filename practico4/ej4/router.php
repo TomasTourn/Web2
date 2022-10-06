@@ -27,4 +27,9 @@ switch($params[0]){
             case "home":
                 header("location: ". BASE_URL."home");
         }
+        break;
+    case "showAll":
+        $controller = new CleaningController();
+        $controller->showAll(); 
+        break;
 }

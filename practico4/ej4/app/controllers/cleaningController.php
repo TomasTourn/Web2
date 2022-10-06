@@ -4,17 +4,25 @@ require_once "app/models/cleaningModel.php";
 require_once "app/views/cleaningView.php";
 
 class CleaningController{
-
+    
     private $model;
     private $view;
 
     function __construct(){
+        
         $this->model = new cleaningModel();
         $this->view = new cleaningView();
     }
 
 
 
+
+    function showAll(){
+          //get the data
+          $products= $this->model->getAll();
+          //send the data to view to print it
+          $this->view->showAll($products);
+    }
     function showProducts(){
         
         //get the data
