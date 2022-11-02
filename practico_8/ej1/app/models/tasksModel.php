@@ -7,7 +7,7 @@ class tasksModel{
     private $db;
 
     public function __construct() {
-        $this->db = new PDO('mysql:host=localhost;'.'dbname=db;charset=utf8', 'root', '');
+        $this->db = new PDO('mysql:host=localhost;'.'dbname=db_tasks;charset=utf8', 'root', '');
     }
 
     /**
@@ -34,11 +34,27 @@ class tasksModel{
         return $task;
     }
 
-    public function insert($title, $description, $priority) {
+    public function addTask($title, $description, $priority) {
         $query = $this->db->prepare("INSERT INTO task (titulo, descripcion, prioridad, finalizada) VALUES (?, ?, ?, ?)");
         $query->execute([$title, $description, $priority, false]);
 
         return $this->db->lastInsertId();
+    }
+
+    function deleteTask($id){
+        $query = $this->db->prepare('DELETE FROM task WHERE id = ?');
+        $query->execute([$id]);
+
+    }
+    public function finalize($id) {
+        $query = $this->db->prepare('UPDATE task SET finalizada = 1 WHERE id = ?');
+        $query->execute([$id]);
+        // var_dump($query->errorInfo()); // y eliminar la redireccion
+    }
+
+    function updateTask($id,$task){
+        $query = $this->db->prepare('UPDATE task SET titulo= ?,descripcion= ?,prioridad=?,finalizada=? WHERE id = ?');
+        $query->execute([$task->titulo,$task->descripcion,$task->prioridad,$task->finalizada,$id]);
     }
 
 

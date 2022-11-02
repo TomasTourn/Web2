@@ -14,9 +14,11 @@ define("VER", BASE_URL . 'ver');
 $router = new Router();
 
 //define tabla de ruteo
-$router->addRoute('home','GET','tasksController','getAll');
-$router->addRoute('getOne/:ID','GET','tasksController','getOne');
-$router->addRoute('add','POST','tasksController','add');
+$router->addRoute('tasks','GET','tasksController','getAll');
+$router->addRoute('tasks/:ID','GET','tasksController','getOne');
+$router->addRoute('tasks/:ID','DELETE','tasksController','deleteTask');
+$router->addRoute('tasks','POST','tasksController','addTask');
+$router->addRoute('tasks/:ID','PUT','tasksController','updateTask');
 
 
 //rutea
